@@ -1,0 +1,40 @@
+{
+  "name": "nexis-launcher",
+  "version": "2.0.0",
+  "description": "Nexis Launcher — Launcher de Minecraft rápido, seguro y gratuito",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "Tu Nombre",
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.nexislauncher.launcher",
+    "productName": "Nexis Launcher",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "build/**/*",
+      "images/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "images/icon_transparent.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "createDesktopShortcut": true
+    }
+  },
+  "dependencies": {
+    "minecraft-launcher-core": "^3.18.2"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
