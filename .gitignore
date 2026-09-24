@@ -1,0 +1,12 @@
+node_modules/
+.svelte-kit/
+deno.lock
+build/
+*.snt
+*.lock
+!Cargo.lock
+!flake.lock
+result
+result-*
+target/
+flake.lock
